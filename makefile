@@ -2,7 +2,7 @@ export DB_URL := postgres://shrt:password@localhost:5432/shrt?sslmode=disable
 
 build: clean
 	@mkdir bin
-	go build -trimpath -ldflags '-s -w' -o bin
+	go build -o bin
 
 test:
 	docker-compose --file docker-compose-test.yml up -d
